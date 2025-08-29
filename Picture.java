@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
     private boolean drawn;
 
     /**
@@ -27,6 +28,7 @@ public class Picture
         roof = new Triangle();  
         sun = new Circle();
         drawn = false;
+        sun2 = new Circle();
     }
 
     /**
@@ -51,11 +53,17 @@ public class Picture
             roof.moveVertical(-60);
             roof.makeVisible();
     
-            sun.changeColor("yellow");
+            sun.changeColor("blue");
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            sun2.changeColor("blue");
+            sun2.moveHorizontal(100);
+            sun2.moveVertical(-20);
+            sun2.changeSize(80);
+            sun2.makeVisible();
             drawn = true;
         }
     }
@@ -79,6 +87,6 @@ public class Picture
         wall.changeColor("red");
         window.changeColor("black");
         roof.changeColor("green");
-        sun.changeColor("yellow");
+        sun.changeColor("blue");
     }
 }
